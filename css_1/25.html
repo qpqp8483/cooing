@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>다단 활용하기</title>
+<link href="http://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
+<style>
+	*{ margin:0; padding:0; }
+	h1 { margin:30px auto; text-align:center; }
+	#news { 
+			/*column-count:2; /* 단의 갯수를 설정*/
+			column-width: 500px; /* 단의 폭(width)값을 설정 */
+			column-rule: 1px dashed gray; /* 단 사이에 선을 지정 */
+			column-gap:100px; /* 단과 text사이의 폭값 */ 
+			padding:0 50px;}
+			
+	#news h2 { /* 기사제목 */ 
+			  font-family:'Noto Sans KR', sans-serif;
+			  font-weight:700;
+			  color:#333; 
+			  text-align:center;
+			  font-size:30px;
+			  letter-spacing:-2px;}
+			  
+	#news h2::after { content:"＂";
+					  color:#999;
+					  }
+					  
+	#news h2::before { content:"＂"; 
+					   color:#999;
+					  }
+					  
+	#news time { font-size:12px;
+				 font-family:Tahoma, Geneva, sans-serif;
+				 color:#060;
+				 text-align:right; 
+				 display:block;
+				 margin:20px 0 5px 0;
+				 }
+				 
+	#news time+p+p { text-indent:15px;
+				   color:#333; }
+				   
+	#news .copy { color:#f00;
+				  font-style:italic;
+				  font-size:12px; }
+				  
+	#news #align_right { text-align:right;
+						 
+						 overflow:hidden;  }
+	
+	
+</style>
+</head>
+
+<body>
+    <h1>다단(column) 활용하기</h1>
+    <div id="news">
+    	<h2>어벤저스3 국내 천만 관객 돌파...배우 감사 메시지 공개 </h2>
+    	<time>2018년 05월 08일</time>
+        <p id="align_right"><img src="img/201805141140072769_d.jpg" width="100%">1000만관객사진
+    	<p>
+   		14일, 업계는 '어벤저스 인피니티 워'가 12∼13일 관객 63만여 명을 동원하면서 누적 관객 수천만 명을 돌파했다고 발표했다. 우리나라 천만 관객 돌파는 역대 21번째이며 외화로서는 역대 5번째 기록이다.
+
+마블 코리아는 천만 돌파를 기념하며 공식 SNS에 출연 배우들의 감사 메시지 영상을 올렸다. 출연진 톰 홀랜드와 톰 히들스턴, 베네딕트 컴버배치와 폼 클레멘티에프는 지난달 방한 당시 천만 관객 기념 인터뷰를 미리 촬영해놨다고 알려졌다.
+		</p>
+        
+        <p>토르 <span class="copy">저작권</span></p>
+        <p>아이언맨 <span class="copy">저작권</span></p>
+        <p>캡틴 <span class="copy">저작권</span></p>
+        <p>윈터솔져 <span class="copy">저작권</span></p>
+        <p>가모라 <span class="copy">저작권</span></p>
+        <p>토르 <span class="copy">저작권</span></p>
+        <p>토르 <span class="copy">저작권</span></p>
+        
+	
+    </div>
+</body>
+</html>

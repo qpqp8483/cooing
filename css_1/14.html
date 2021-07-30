@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>마진겹침 현상 방지법</title>
+<style>
+	* { margin:0; padding:0; } /* 기본스타일 리셋 */
+	.wrap { border:1px solid red; 
+			width:800px;
+			margin:20px auto;}
+	
+	p {border:1px dashed blue; text-align:center; height:100px; float:left; box-sizing:border-box;}
+	p:first-child { width:50%; }
+	p:nth-child(2) { width:50%; }
+	p:nth-child(3) { width:100%; }
+	.wrap:nth-child(1) { height:200px; }  /* 1번방법 : 부모에게 높이갚을 지정 */
+	
+
+	.wrap:nth-child(2) { font-size:0;} 
+	.wrap:nth-child(2) p { float:none;
+						   display:inline-block; 
+						   font-size:16px; }	/* 2번방법 : float 대신 inline-block 사용 */
+						   
+	.wrap:nth-child(3) {overflow:hidden;}	/* 3번방법 : overfiow의 숨은기능으로 높이값을 정확하게 표현 */
+</style>
+</head>
+
+<body>
+<div class="wrap">
+	<p></p>
+    <p></p>
+	<p>1)부모에게 높이값을 지정!<br>
+	     단점: 높이값 고정, 유동적인 레이아웃으로 이용할 수 없음.</p>
+    
+</div>
+<div class="wrap">
+	<p></p>
+    <p></p>
+	<p>2) float대신 inline-block을 사용<br>
+    	  단점: 높낮이 맞추기가 힘듦.</p> 
+</div>
+<div class="wrap">
+	<p></p>
+    <p></p>
+	<p>3) 부모에게 overflow:hidden 적용.
+       장점: 유동적인 레이아웃 설계가 가능</p>
+</div>
+<div class="wrap">
+	<p></p>
+    <p></p>
+	<p>float을 사용하면 마진겹침 현상(부모의 높이값이 사라짐)이 일어남.</p>
+</div>
+</body>
+</html>

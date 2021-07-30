@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Animation3</title>
+<style>
+	body { background-color:#066; padding:100px; }
+	div img { transform-origin:center top;		/* 회전중심 설정:center, 50%, 50px */
+	/*
+			  animation-duration: 2s;		 //동작시간 
+			  animation-name: swing;		//애니메이션 이름
+			  animation-tㄴiming-function:ease-in-out;	 //가속도 설정 
+			  animation-iteration-count:infinite;		 //반복횟수, 무한 
+			  animation-direction:alternate;		//왕복주행 설정 
+			  animation-delay:1s; 					//지연시간
+			  */                  
+			  animation:swing 2s ease-in-out infinite alternate ; 
+			  /* 시간을 두번 쓰면 앞( 동작시간 ), 뒤 ( 지연시간 ) */
+			  
+			  }	
+			   
+	@keyframes swing {
+		from { transform:rotate(20deg); }
+		to { transform:rotate(-20deg); }
+		}	
+</style>
+</head>
+
+<body>
+<div>
+	<img src="image/frame-getstarted.png">
+</div>
+</body>
+</html>

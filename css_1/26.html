@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>이메일 템플릿 에서의 코딩법</title>
+<style>
+	html,body { height:100%; margin:0; padding:0; }
+</style>
+</head>
+
+<body>
+<h1>이메일에서의 코딩방법</h1>
+<ul>
+	<li>모든 기본 속성은 스타일에서 지정!</li>
+    <li>내부/외부 스타일은 x, 인라인방식의 스타일 사용</li>
+    <li>사용된 이미지의 주소는 절대경로(http://도메인...)를 사용</li>
+    <li>레이아웃은 div대신 tabel을 이용하여 구성</li>
+</ul>
+<div style="display:block; width:100%; height:100%; background-color:#ececec;
+background-image:url(http://ggooing.com/ex/image/email/abc.gif); background-repeat:repeat-x;">
+	<table border="1" style="width:690px;" cellpadding="0" cellspacing="0"
+    align="center">
+    	<tr>
+        	<td colspan="2">
+            	<div style="border: 1px solid #ddd; background-color:#fff; width:666px;
+                margin:35px auto; padding:35px; box-sizing:border-box;
+                color:#525252; font-size:14px; line-height:160%;">
+            	<p style="margin-left:-23px;"><img src="http://ggooing.com/ex/image/email/d.gif"></p>
+                <p>
+                    We’re updating our Privacy Policy<br>
+                    
+                    Hello Envato community member,<br>
+
+You’ve probably been receiving lots of emails from companies notifying you of updates to privacy policies because of changes to EU data protection laws.<br>
+
+We’ve also updated our Privacy Policy to: <br>
+<ul>
+
+
+<li>Give you more clear and detailed information about your collective rights and responsibilities with respect to your privacy and personal information.</li>
+<li>Make it easier for you to control the information you provide us. You’ll see that our policy explains your choices about this.</li>
+<li>Provide more detail about the measures we have in place to keep your personal information secure.</li>
+</ul>
+
+You can read the full text of our Privacy Policy <a href="#">here.</a><br>
+
+The updated Privacy Policy automatically comes into effect for all Envato users on 25 May 2018. So your continued use of the Envato sites from that date will be subject to it. <br>
+
+Thanks again for being part of the Envato community!<br>
+
+Regards<br>
+
+Envato<br>
+
+ You have been sent this email as you have an Envato account - created when using one of our sites such as ThemeForest, CodeCanyon, GraphicRiver, VideoHive, AudioJungle, PhotoDune or Envato Elements.<br>
+
+ Please do not respond to this email, as we are not able to respond to messages to this address.</p>
+ </div>
+            </td>
+        </tr>
+        <tr>
+        	<td valign="top" style="border-top:6px solid #b3b3b3 ; border-bottom:1px dashed #b3b3b3; padding:15px 0;"><img src="http://ggooing.com/ex/image/email/sd.gif"></td>
+            <td style="text-align:right; color:#87878; font-size:12px; border-top:6px solid #b3b3b3 ; border-bottom:1px dashed #b3b3b3; padding:15px 0;">
+				Envato, PO Box 16122, Collins Street West, VIC 8007, Australia<br>
+				http://envato.com </td>
+        </tr>
+    </table>
+
+</div>
+</body>
+</html>

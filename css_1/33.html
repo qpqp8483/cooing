@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>이미지(IS) 애니메이션</title>
+<style>
+	h1{text-align:center;}
+	#loader{/*제주도간 잘생긴 차누씨에게....☆ */
+			width:472px;/*차누야.... 제주도가서 즐겁니...?*/
+			height:472px;/*나는 여기서 코딩하고있는데....^^ 너는 즐겁니...?*/
+			border:1px solid red;/*증믈 브릅드....^^ */
+			background-image:url(images/preload.png); /*지금쯤 나를 위해 한라봉차를 사고 있겠지~? */
+			position:fixed;/*바디의 높이를 100%로 했다면 position을 앱솔루트(높이값이 잘 안먹음)로 해도되지만  하기 귀찮으니 fixed*/
+			top:50%;
+			left:50%;
+			transform:translate(-50%,-50%);
+			animation:loader 3s steps(60) infinite;/*60개의 프레임으로 나눠서 보여주는거! steps의 가로가 프레임수! */
+			
+		}
+	@keyframes loader{
+			from{background-position:0px 0px;}
+			to{background-position:-28320px 0;}/*여기에 퍼센트를 주면 이미지가 이상해져 왜냐묜 퍼센트를 나누면 0.XXXX px 로 나눠지기때문에 (깔끔하게 나눠지지않아서)  */
+		}
+</style>
+</head>
+
+<body>
+<h1>Image Sprite를 활용한 인트로 모션</h1>
+<div id="loader"><!--이미지를 불러오기 위한거라서 이름을 로더로했대--><!--인터넷 브라우저마다 이미지 사이즈제한(너무큰경우)을 걸어두는곳이 있으니 유의하래 ㅇ.< --></div>
+</body>
+</html>

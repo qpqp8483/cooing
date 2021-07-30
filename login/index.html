@@ -1,0 +1,48 @@
+ <!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ggooing</title>
+<style>
+	* { margin:0; padding:0; box-sizing:border-box;}
+	h1 { display:none; }
+	#ggooing { width:513px; margin:200px auto; position:relative;}
+	#ggooing h2 { width:513px; height:93px; text-indent:-9999px; background-image:url(img/ggooing.png); margin:auto; }
+	form { margin-top:69px; }
+	fieldset { border:none; }
+	legend { display:none; }
+	#id,#pw { margin:auto; display:block; padding-left:15px; width:460px; height:51px; font-size:15px; background-color:transparent; border:1px solid #D5D5D5;}
+	#id { margin-bottom:14px; }
+	#id:focus { outline:none; border:1px solid #42c62b; }
+	#pw:focus { outline:none; border:1px solid #42c62b; }
+	#login { width:460px; height:61px; background-color:#42c62b; margin:auto; display:block; border:none; color:#fff; font-size:20px; margin-top:30px;}
+	#check { width:24px; height:24px; margin:20px 0 0 25px; background-color:transparent; background-image:url(img/check.png); opacity:0; }
+	#check:checked+div { background-image:url(img/check_ch.png); }
+	#check+div { width:24px; height:24px; background-image:url(img/check.png); position:absolute; left:25px; top:389px; }
+	#check+div+p { position:absolute; left:55px; top:392px; font-size:14px; }
+	hr { margin:25px auto; width:460px; border:1px solid #D7D7D7; height:1px;}
+	hr+p { text-align:center; font-size:14px; }
+	hr+p a { text-decoration:none; color:#999; }
+	hr+p span { color:#999; }
+	hr+p a:hover { color:#60c14c; }
+</style>
+</head>
+
+<body>
+<h1>ggooing.com</h1>
+<div id="ggooing">
+	<h2>ggooing.com바로가기</h2>
+    <form action="#" method="post">
+    	<legend>로그인</legend>
+    	<fieldset>
+        	<input type="text" name="id" id="id" placeholder="아이디" autocomplete="off">
+            <input type="password" name="pw" id="pw" placeholder="비밀번호">
+            <input type="submit" name="login" value="로그인" id="login" >
+            <label><input type="checkbox" name="check" id="check"><div></div> <p>로그인 상태유지</p></label>
+        </fieldset>
+    </form>
+    <hr>
+    <p><a href="#">아이디 비밀번호 찾기</a> <span>|</span> <a href="#">회원가입</a></p>
+</div>
+</body>
+</html>

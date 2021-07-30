@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>transform(변형)</title>
+<style>
+	div { border:1px solid gray; width:200px; height:200px; display:inline-block; background-color:#ccc; text-align:center; line-height:200px; transition:1s ease;}
+	div:nth-child(2):hover { transform:translate(20px,20px); }
+	div:nth-child(3):hover { transform:scale(1.2,1.2); } /* 비율 */
+	div:nth-child(4):hover { transform:skew(10deg,0); } /* 각도(비틀기) */
+	div:nth-child(5):hover { transform:rotate(360deg); }
+	div:nth-child(6) { 
+					   transition-property:height,width; /* 특정속성에 대해서 */
+					   transition-duration:1s,1s;  /* 플레이시간 ( 0이라도 단위필수 ) */
+					   transition-delay:0s,1s;  /* 지연시간 ( 0이라도 단위필수 ) */
+					   }  
+					   
+	div:nth-child(6):hover { width:100px; height:100px; }
+</style>
+</head>
+
+<body>
+<h1>Transform 변형관련 속성</h1>
+<div>translate</div>
+<div>scale</div>
+<div>skew</div>
+<div>rotate</div>
+<div>width,height</div>
+</body>
+</html>

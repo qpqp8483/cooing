@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>가상요소의 활용</title>
+<style>
+	a.new::after { content:"새창";
+			   background-color:red;
+			   position:absolute;
+			   margin-top:-15px;
+			   font-size:11px;
+			   font-family:dotum, 돋움, sans-serif;
+			   color:#fff;
+			   padding:3px;
+			   border-radius:3px; }
+			   
+	a:nth-child(4):hover::after { content:"새창";
+			   background-color:red;
+			   position:absolute;
+			   margin-top:-15px;
+			   font-size:11px;
+			   font-family:dotum, 돋움, sans-serif;
+			   color:#fff;
+			   padding:3px;
+			   border-radius:3px; }
+			
+	a:nth-child(6) { position:relative; }
+	a:nth-child(6):hover::after { content:"DAUM";
+								  width:90px;
+								  text-align:center;
+								  background-color:red;
+								  position:absolute;
+								  margin-top:-33px;
+								  font-size:11px;
+								  font-family:dotum, 돋움, sans-serif;
+								  color:#fff;
+								  padding:3px;
+								  border-radius:3px 3px 0 0;
+								  box-sizing:border-box;
+								   }
+							
+	a:nth-child(6):hover::before { content:"http://daum.net";
+								  border:1px solid red;
+								  background-color:#fff;
+								  position:absolute;
+								  right:0;
+								  margin-right:-90px;
+								  margin-top:-15px;
+								  font-size:11px;
+								  font-family:dotum, 돋움, sans-serif;
+								  color:red;
+								  padding:3px;
+								  border-radius:0 0 3px 3px; 
+								  box-sizing:border-box;}
+
+</style>
+</head>
+
+<body>
+<h1>가상요소의 활용</h1>
+<a href="http://naver.com" target="_blank" class="new">네이버 바로가기</a>
+<br>
+<a href="http://naver.com" target="_blank">네이버 바로가기</a>
+<hr>
+<a href="http://daum.net" target="_blank">다음 바로가기</a>
+</body>
+</html>

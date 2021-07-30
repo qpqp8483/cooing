@@ -1,0 +1,1 @@
+$("footer").css("display","none");

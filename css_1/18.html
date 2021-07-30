@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>가상클래스-링크스타일</title>
+<style>
+	a { color:gray; }
+	a:link { color:black; } /* 아직 가보지 않은 주소로 링크가 걸려있는 경우 */
+	a:visited { color:red; }/* 방문했을때 색이 변함*/
+	a:hover { color:blue; }/* 마우스를 오버했을때 css */
+	a:active { color:blue; font-weight:bold; } /* 클릭하는 순간 ( 마우스를 안땠을때 ) */
+	
+	/* -평시에는 밑줄이 없고 마우스 오버라면 밑줄
+	   -평시에는 그레이 오버하면 레드 
+	   - 글자크기 12px*/
+	div a { text-decoration:none; color:gray;  font-size:12px;}
+	div a:link, div a:visited { color:gray; }
+	div a:hover { color:red; text-decoration:underline; }
+	
+	
+	   
+</style>
+</head>
+
+<body>
+<h1>가상클래스-링크거는법</h1>
+<a href="#">메뉴1</a> | <a href="#">메뉴2</a> | <a href="#">메뉴3</a> | <a href="#">메뉴4</a>
+<div>
+	<a href="http://naver.com">네이버</a> <a href="http://daum.net">다음</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>레이아웃</title>
+<style>
+	#wrap { border:1px solid red; /* 외곽선 */
+			width:800px;
+			height:500px;}
+	
+	#wrap span {border:1px solid blue; 
+				padding:10px;  
+				margin:10px;
+				display:block;} /* 자손 선택자 */
+	
+	#wrap>span {background-color:yellow;} /* 자식 선택자 */
+	
+	#wrap>span>span {background-color:green;}
+	
+	#wrap>ul {border:1px solid purple;
+			  padding:0;
+			  text-align:center;
+			  font-size:0;  /* 박스간격을 0으로 해줌 >> li에 폰트 사이즈 줘야함.*/}
+	
+	#wrap li {border:1px solid gray;
+			  list-style:none;
+			  padding:10px;
+			  display:inline-block;
+			  font-size:14px; /* ul의 글자크기를 상속 받아서 다시 폰트조정 */
+			  margin:10px;}
+    #wrap li:nth-child(1) { background-color:red}/* 가상선택자 nth-child로 x번째 요소를 선택 */
+	
+	#wrap #left { width:382px;
+				  height:100px;
+				  background-color:gray;
+				  margin:10px;
+				  float:left;
+				  border: 1px solid gray;}
+	
+	#wrap #right {width:382px;
+				  height:100px;
+				  background-color:gray;
+				  float:right;
+				  margin:10px 10px 0 0;
+				  border: 1px solid gray;}
+
+</style>
+
+</head>
+
+
+
+<body>
+<h1>레이아웃 관련 요소</h1>
+<div id="wrap">
+	<span>나는 레이아웃
+    		<span>나는 p안에p</span>
+    </span>
+    <ul>
+    	<li>001</li>
+        <li>002</li>
+        <li>003</li>
+        <li>004</li>
+        <li>005</li>
+        <li>006</li>
+    </ul>
+    <div id="left"></div>
+    <div id="right"></div>
+    여기에 내용
+</div>
+<p>#wrap 밖에 있는 p요소</p>
+</body>
+</html>

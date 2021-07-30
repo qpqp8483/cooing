@@ -1,0 +1,22 @@
+@charset "utf-8";
+* { margin:0; padding:0; list-style:none; box-sizing:border-box; }
+body { background-color:#ececee; }
+#wrap { width:700px; height:710px; background-color:#fff; margin:auto; min-width:700px; }
+/* header */
+#wrap div:first-child { height:90px; border-bottom:1px solid #e6e6e6; padding-top:28px; }
+#wrap div:first-child h1 #join_3 { display:block; text-indent:-9999px; width:145px; height:34px; background-image:url(../img/login.png); margin:auto; background-size:cover; }
+
+/* container */
+#wrap #container_join_3 { height:525px; padding:20px 0 0px; font-family: 'Noto Sans KR' }
+#wrap #container_join_3 ul { width:34px; height:6px; margin:10px auto 0; }
+#wrap #container_join_3 ul li { width:6px; height:6px; border-radius:100%; background-color:#d4d4d4; float:left; margin-left:8px; }
+#wrap #container_join_3 ul li:first-child { margin-left:0; }
+#wrap #container_join_3 ul li:nth-child(3) { background-color:#000; }
+#wrap #container_join_3 h2 { sans-serif; font-size:24px; font-weight:500; color:#1e1e1e; text-align:center; height:24px; line-height:20px; margin-top:150px; }
+#wrap #container_join_3 h2+p { sans-serif; font-size:17px; height:17px; line-height:13px; text-align:center; margin-top:30px; color:#1e1e1e; }
+#wrap #container_join_3 h2+p span { color:#0f89d0; }
+#wrap #container_join_3 div { height:151px; border-top:1px solid #e6e6e6; margin-top:140px; }
+#wrap #container_join_3 a { width:220px; height:60px; background-color:#999; color:#fff; margin: 32px auto 0; display:block; border:none; font-size:18px; outline:none; display:block; text-align:center; text-decoration:none; line-height:59px; font-weight:100; transition:.2s all ease; }
+#wrap div:last-child { border-top:1px solid #e6e6e6; }
+#wrap div:last-child p { text-align:center; color:#9f9f9f; margin-top:40px; height:12px; font-size:12px; font-family:Dotum,돋움; line-height:10px; }
+footer { display:none; }

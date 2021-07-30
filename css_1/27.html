@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>메뉴만들기</title>
+<link href="http://fonts.googlapics.com/earlyaccess/notosanskr.css" rel="stylesheet">
+<style>
+	/* 1단 메뉴(Depth) */
+	#css_menu * { margin:0; padding:0; list-style:none; box-sizing:border-box; text-decoration:none; }
+	#css_menu>ul { margin:auto; width:795px; height:70px; }
+	#css_menu>ul>li { float:left; font-family:"Noto Sans KR",sans-serif; font-size:24px; font-weight:700; text-align:center; line-height:50px; margin-right:10px; }
+	#css_menu>ul>li>a { color:#333; border-radius:100px; display:block; width:150px; height:60px;  background: -webkit-linear-gradient(top, #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); box-shadow:3px 3px 3px #ccc; transition: all .5 ease; border:1px solid black; transition:all .3s ease;}
+	#css_menu>ul>li:last-child { margin:0; }
+	#css_menu>ul>li>a:hover {
+		background: -webkit-linear-gradient(top, #ffffff 0%,#f3f3f3 50%,#ededed 51%,#ffffff 100%);
+		box-shadow: 0 0 0 #000; /* 그림자에 아무것도 안넣으면 버튼처럼 눌린 효과가 됨 */
+		transform:scale(.95,.95);
+	}
+	/* 2단 메뉴(Depth) */
+	#css_menu>ul>li>ul { margin-top:10px; height:0; transition:all .3s ease; overflow:hidden; opacity:0; } /* 다시 한번 참고하기 ! */
+	#css_menu>ul>li:hover/* 1단 메뉴 */ ul { display:block; height:300px; opacity:1; } /* 띄어져 있으면 호버가 풀리면서 사라짐 li에 잡고 호버를 걸어야 함 */
+	#css_menu>ul>li>ul>li /* li li이도 상속 개념에서 맞기 때문에 가능함 */ { border-bottom:1px dashed #ccc; text-align:left; padding-left:10px; height:55px; }
+	#css_menu>ul>li>ul>li>a { color:#666; }
+	#css_menu>ul>li>ul>li>a:hover { color:#333; }
+	/* 3단 메뉴(Depth) */
+	
+	
+	
+			
+</style>
+</head>
+
+<body>
+<h1>메뉴만들기</h1>
+<h2>기본 Mark-up</h2>
+<nav>
+	<ul>
+    	<li><a href="">홈</a></li>
+        <li><a href="">회사소개</a>
+        	<ul>
+            	<li><a href="">대표인삿말</a></li>
+                <li><a href="">회사연혁</a></li>
+                <li><a href="">사업분야</a></li>
+                <li><a href="">조직도</a></li>
+            </ul>
+        </li>
+        <li><a href="">제품안내</a>
+        	<ul>
+            	<li><a href="">냉장고</a></li>
+                <li><a href="">세탁기</a></li>
+                <li><a href="">공기청정기</a></li>
+                <li><a href="">제습기</a></li>
+            </ul>        
+        </li>
+        <li><a href="">찾아오는길</a></li>
+        <li><a href="">문의하기</a></li>
+    </ul>
+</nav>
+<h2>표준 CSS Design</h2>
+<nav id="css_menu">
+	<ul>
+    	<li><a href="">홈</a></li>
+        <li><a href="">회사소개</a>
+        	<ul>
+            	<li><a href="">대표인삿말</a>
+                	<ul>
+                    	<li><a href="">나는3단</a></li>
+                        <li><a href="">나는3단</a></li>
+                        <li><a href="">나는3단</a></li>
+                        <li><a href="">나는3단</a></li>
+                    </ul>
+                </li>
+                <li><a href="">회사연혁</a>
+                    <ul>
+                    	<li><a href="">나는3단</a></li>
+                        <li><a href="">나는3단</a></li>
+                        <li><a href="">나는3단</a></li>
+                        <li><a href="">나는3단</a></li>
+                    </ul>
+                </li>
+                <li><a href="">사업분야</a>
+                    <ul>
+                    	<li><a href="">나는3단</a></li>
+                        <li><a href="">나는3단</a></li>
+                        <li><a href="">나는3단</a></li>
+                        <li><a href="">나는3단</a></li>
+                    </ul>                
+                </li>
+                <li><a href="">조직도</a>
+                    <ul>
+                    	<li><a href="">나는3단</a></li>
+                        <li><a href="">나는3단</a></li>
+                        <li><a href="">나는3단</a></li>
+                        <li><a href="">나는3단</a></li>
+                    </ul>                
+                </li>
+            </ul>
+        </li>
+        <li><a href="">제품안내</a>
+        	<ul>
+            	<li><a href="">냉장고</a>
+                    <ul>
+                    	<li><a href="">나는3단</a></li>
+                        <li><a href="">나는3단</a></li>
+                        <li><a href="">나는3단</a></li>
+                        <li><a href="">나는3단</a></li>
+                    </ul>                
+                </li>
+                <li><a href="">세탁기</a>
+                    <ul>
+                    	<li><a href="">나는3단</a></li>
+                        <li><a href="">나는3단</a></li>
+                        <li><a href="">나는3단</a></li>
+                        <li><a href="">나는3단</a></li>
+                    </ul>                
+                </li>
+                <li><a href="">공기청정기</a>
+                    <ul>
+                    	<li><a href="">나는3단</a></li>
+                        <li><a href="">나는3단</a></li>
+                        <li><a href="">나는3단</a></li>
+                        <li><a href="">나는3단</a></li>
+                    </ul>                
+                </li>
+                <li><a href="">제습기</a>
+                    <ul>
+                    	<li><a href="">나는3단</a></li>
+                        <li><a href="">나는3단</a></li>
+                        <li><a href="">나는3단</a></li>
+                        <li><a href="">나는3단</a></li>
+                    </ul>                
+                </li>
+            </ul>        
+        </li>
+        <li><a href="">찾아오는길</a></li>
+        <li><a href="">문의하기</a></li>
+    </ul>
+</nav>
+</body>
+</html>

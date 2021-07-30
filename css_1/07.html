@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>폼문(Form)</title>
+</head>
+
+<body>
+<h1>Form</h1>
+<h2>폼문의 기본 사용법</h2>
+<fieldset>
+<legend>네이버 영화검색</legend>
+<form action="https://movie.naver.com/movie/search/result.nhn" method="get">
+	<input type="text" name="query">
+    <input type="hidden" name="ie" readonly value="utf8">
+    <input type="submit" value="네이버 영화검색">
+</form>
+<form action="https://search.daum.net/search" method="get">
+	<input type="text" name="q"> <input type="submit" value="다음">
+</form>
+<form action="https://search.daum.net/nate" method="get">
+	<input type="text" name="q"> <input type="submit" value="네이트">
+</form>
+<form action="https://www.google.co.kr/search" method="get">
+	<input type="text" name="q"> <input type="submit" value="구글">
+</form>
+<legend>구글 검색</legend>
+<form action="https://www.google.co.kr/search" method="get">
+	<select name="tbm">
+    	<option>전체</option>
+        <option value="isch"> 이미지 </option>
+        <option value="vid"> 동영상 </option>
+        <option value="nws"> 뉴스 </option>
+        <option value="bks"> 도서 </option>
+        <option value="fin"> 금융 </option>
+
+    </select>
+    <input type="text" name="query">
+    <input type="hidden" name="ie" readonly value="utf8">
+    <input type="submit" value="구글 검색">
+</form>
+</fieldset>
+<h2>input의 종류</h2>
+<input type="text"> text : 글자 입력폼<br><br>
+<input type="hidden"> hidden : 정보값을 숨겨 고정<br><br>
+<input type="text" maxlength="5"> maxlength : 글자수를 제한시키는것<br><br>
+<input type="text" disabled value="disabled">  disabled : 글자 입력(수정)을 제한시키는것<br><br>
+<input type="text" readonly value="readonly">  readonly : 글자 입력(수정)을 제한시키는것<br><br>
+<input type="password"> password: 비밀번호 입력폼<br><br>
+<label><input type="checkbox" name="hobby2" value="1" id="sleep">잠자기</label><label><input type="checkbox" name="hobby2" value="2">먹기</label>
+<label><input type="checkbox" name="hobby2" value="3">놀기</label> 
+			 checkbox: 다중 선택을 할때 쓰는 폼<br><br>
+<label><input type="radio" name="hobby" value="1">잠자기</label><label><input type="radio" name="hobby"value="2">먹기 </label>
+<label><input type="radio" name="hobby"value="3">놀기 </label>
+			 radio: 한 개만 선택을 할때 쓰는 폼<br><br>
+             
+<label for="sleep">먹기선택(for는 id값을 사용)</label><br><br>
+<input type="file"> file : 파일첨부를 할 때 <br><br>
+<input type="submit"> submit : 전송/제출/완료/ok 버튼으로 form문에 action이 실행 <br><br>
+<input type="reset"> reset : 입력한 정보를 초기화, 다시쓰기 기능<br><br>
+<input type="image" src="../../k-008.jpg" width="50px" height="50px"> image + src : 버튼을 이미지로 대체<br><br>
+<input type="button" value="버튼"> butten : 버튼<br><br>
+<button>버튼</button> butten tag : 버튼<br><br>
+</body>
+</html>

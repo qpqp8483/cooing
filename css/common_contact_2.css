@@ -1,0 +1,121 @@
+@charset "utf-8";
+
+/* 초기화 */
+* { margin:0; padding:0; list-style:none; box-sizing:border-box; text-decoration:none;}
+.screen_out { display:none; }
+.text_out { text-indent:-9999px; }
+html,body,#wrap { height:100%; }
+#wrap { min-width:1200px; }
+/* header시작 */
+header { width:100%; height:65px;  background: linear-gradient(to bottom, #fffeff 0%,#f1f1f1 100%); overflow:hidden; }
+header>div { width:100%; height:100%; margin:auto; max-width:1700px; padding:0 100px 0 100px; min-width:900px; }
+header h1 { width:93px; height:22px; padding-top:21px; display:inline-block; float:left; }
+header h1 a { width:93px; height:22px; background-image:url(../img/contact.png); text-indent:-9999px; overflow:hidden; background-size:cover; display:block;}
+header nav { width:452px; height:100%; margin:auto; }
+header nav ul li { float:left; position:relative; height:22px; border-right:1px solid rgba(255,255,255,.2); margin-top:22px; } 
+header nav ul li:last-child { border:none; }
+header nav ul li a span:nth-child(2) { 
+						   display:block; 
+						   border-top:none;
+						   border-left:9px solid transparent;
+						   border-right:9px solid transparent;
+						   border-bottom:10px solid #a6dea0;		
+						   position:absolute;
+						   top:45px;
+						   left:50%;
+						   z-index:2;
+						   opacity:1;
+						   transform:translateX(-50%);	
+						   transition:all .2s ease;	 }
+
+header nav ul li a span:nth-child(3) {
+						   display:block; 
+						   border-top:none;
+						   border-left:10px solid transparent;
+						   border-right:10px solid transparent;
+						   border-bottom:11px solid #a6dea0;	
+						   position:absolute;
+						   top:45px;
+						   left:50%;
+						   z-index:1;
+						   opacity:0;
+						   transform:translateX(-50%);	
+						   transition:all .2s ease;	
+ }
+header nav ul li:hover>a { color:#a6dea0; text-shadow:1px 1px 1px rgba(21,60,68,1); }
+header nav ul li a:hover span:nth-child(2) { top:33px; opacity:1; }
+header nav ul li a:hover span:nth-child(3) { top:31px; opacity:1; }
+header nav ul li a { font-family: 'Anton', sans-serif; font-size:25px; display:block; line-height:22px;padding:22px 16px 0; letter-spacing:1px; height:66px; margin-top:-22px; color:#575757;}
+header nav ul li:nth-child(4) a { color:#a6dea0; text-shadow:1px 1px 1px rgba(21,60,68,1);}
+header nav ul li:nth-child(4) a span { top:33px; }
+header p { float:right; margin-top:-44px; }
+header p a { font-size:12px; color:#474747;}
+header p a:hover { color:#a6dea0; text-shadow:1px 1px 1px rgba(0,0,0,1); }
+header p a:first-child { border-right:1px solid rgba(255,255,255,.2); padding-right:16px; margin-right:12px; }
+header p a i { font-size:13px; margin-right:5px; }
+/* 
+--------------------------------header 끝 
+*/
+/*
+--------------------------------contact 시작
+*/
+/*id contact*/
+#container #contact h2 { height:200px; background: linear-gradient(to right, #fc7097 0%,#ca78e6 20%,#7bb4e4 38%,#aee593 62%,#aee593 62%,#dad972 81%,#fcc371 100%); font-family: 'Anton', sans-serif; font-size:60px; letter-spacing:2px; text-align:center; line-height:198px; font-weight:300; color:#2d2d2d; }
+#container #contact ul { width:379px; height:128px; margin:90px auto 0; }
+#container #contact ul li { float:left; width:137px; height:128px; text-align:center; position:relative; }
+#container #contact ul li::before { content:"전화 기다림둥!"; display:block; position:absolute; top:-80px;left:20px; font-size:13px; width:92px; height:33px; background-image:url(../img/call_mail.png); font-family: 'Noto Sans KR', sans-serif; text-align:center; line-height:22px; color:#474747; font-weight:500; transition:1s all ease; opacity:0; }
+#container #contact ul li:last-child::before { content:"메일 기다림둥!" }
+#container #contact ul li:last-child { float:right; }
+#container #contact ul li>img { transition:.5s all ease; }
+#container #contact ul li:hover { cursor:pointer; }
+#container #contact ul li:hover::before { opacity:1; top:-42px; }
+#container #contact ul li:hover>img { transform:rotate(360deg); }
+#container #contact ul li:hover>p { color:#2d2d2d; }
+#container #contact ul li p { font-family: 'Noto Sans KR', sans-serif; font-size:21px; font-weight:700; color:#7e7e7e; margin-top:7px;}
+/* id board */
+#container #board { width:900px; margin:126px auto 0; font-family: 'Noto Sans KR', sans-serif; }  
+#container #board h3 { font-size:25px; border-left:8px solid #d2d2d2; height:28px; line-height:25px; padding-left:6px; color:#444; margin-bottom:30px;}
+#container #board>ul:nth-child(2)>li { height:80px; border-bottom:1px solid #ebebeb; }
+#container #board>ul:nth-child(2)>li>p:first-child { width:70px; height:100%; float:left; font-size:36px; color:#3a3a3a; text-align:center; line-height:80px; }
+#container #board>ul:nth-child(2)>li>h4 { height:48px; font-size:26px; line-height:55px; }
+#container #board>ul:nth-child(2)>li>h4 a { color:#3a3a3a; }
+#container #board>ul:nth-child(2)>li>h4+p { float:left; font-size:12px; margin-top:10px; border-right:1px solid #b4b4b4;height:12px; line-height:12px; padding-right:9px; margin-right:9px; }
+#container #board>ul:nth-child(2)>li>h4+p>span { color:#7e7e7e; }
+#container #board>ul:nth-child(2)>li>p:nth-child(4) { font-size:12px; color:#7e7e7e; margin-top:10px; line-height:12px; height:12px; float:left; }
+#container #board>ul:nth-child(2)>li>ul { float:right; margin-top:5px;}
+#container #board>ul:nth-child(2)>li>ul>li { float:left; width:40px; height:18px; margin-left:20px; } 
+#container #board>ul:nth-child(2)>li>ul>li img { float:left; }
+#container #board>ul:nth-child(2)>li>ul>li p { float:right; font-size:13px; color:#909090; height:13px; margin-top:2px; line-height:13px; }
+#container #board>div { width:196px; height:22px; margin:50px auto 90px; }
+#container #board>div button { width:22px; height:22px; display:block; float:left; margin-left:7px; color:#686868; font-size:16px; font-family: 'Noto Sans KR', sans-serif; line-height:15px; font-weight:500; border:1px solid #b5b5b5; border-radius:2px; background-color:transparent; background-repeat:no-repeat; background-position:center center; outline:none; }
+#container #board>div button:hover { cursor:pointer; }
+#container #board>div button:first-child { margin-left:0; background-image:url(../img/re_prev.png) }
+#container #board>div button:nth-child(2) { background-image:url(../img/re_prev_2.png); }
+#container #board>div button:nth-child(6) { background-image:url(../img/re_next.png); }
+#container #board>div button:last-child { background-image:url(../img/re_next2.png); }
+/*
+-----------------------footer----------------------
+*/
+footer { height:65px; background-color:#f9f0c5; }
+footer>div { height:100%; margin:auto; max-width:1700px; padding:0 100px 0 100px; position:relative; }
+footer>div h2 { width:93px; height:22px; padding-top:21px; display:inline-block; float:left; }
+footer>div h2 a { width:93px; height:22px; background-image:url(../img/Contact.png); text-indent:-9999px; overflow:hidden; background-size:cover; display:block; opacity:.4; }
+footer>div div { position:absolute; top:17px; float:left; text-align:center; left:50%; transform:translateX(-50%); }
+footer>div p { font-family:돋움,dotum; font-size:13px; color:#908b71; }
+footer>div ul { float:right; margin-top:17px; }
+footer>div ul li { float:left; text-indent:-9999px; margin-right:13px;}
+footer>div ul li a { text-indent:-9999px;}
+footer>div ul li:first-child a { width:22px; height:23px; display:block; background-image:url(../img/int.jpg); background-repeat:no-repeat; background-position:0 2px; }
+footer>div ul li:nth-child(2) a { width:26px; height:23px; display:block; background-image:url(../img/twt.jpg); }
+footer>div ul li:last-child { margin:0; }
+footer>div ul li:last-child a { width:12px; height:23px; display:block; background-image:url(../img/facebook.jpg); }
+/*
+---------------------------팝업
+*/
+#contact_screen { display:block; width:100%; height:1295px; position:absolute; top:0; left:0; background-color:rgba(0,0,0,.7); z-index:100; }
+#contact_screen:hover { cursor:pointer; }
+#contact_detail { position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); width:700px; height:500px; background-color:#fff; z-index:100; box-shadow:15px 15px 15px rgba(0,0,0,.3); padding:40px;}
+#contact_detail h3 { font-size:40px; font-family: 'Noto Sans KR', sans-serif; color:#484848; text-align:center; height:32px; line-height:28px; }
+#contact_detail p { margin-top:100px; text-align:center; font-family: 'Noto Sans KR', sans-serif; font-size:30px; font-weight:600; line-height:80px; color:#555;}
+#contact_detail #ex { width:28px; height:28px; position:absolute; right:15px; top:15px; background-color:transparent; background-image:url(../img/ex.png); border:none; transition:.2s all ease; outline:none; text-indent:-9999px; } 
+#contact_detail #ex:hover { cursor:pointer; transform:rotate(135deg); }

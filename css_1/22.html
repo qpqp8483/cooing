@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>IS(Image sprite)기법</title>
+<style>
+	
+	span { background-image: url(image/w.png);
+		   border:1px solid red;
+		   width:55px;
+		   height:55px;
+	       display:inline-block;
+		   background-repeat:no-repeat;
+		   text-indent:-9999px;
+		   overflow:hidden; }
+
+	#weather { background-position:-264px -67px; }
+			   
+	#weather+span { background-position:-330px -265px; }
+</style>
+</head>
+
+<body>
+    <h1>IS(Image sprite)기법</h1>
+    
+    <ul>
+        <li>과거에는 이미지용량이 우선시되서 무조건 작은 파일로 각각 저장을 사용</li>
+        <li>현재는 이미지용량(다운로드 속도)보다 브라우저 렌더링 속도를 우선시 해서 이미지를 한개로 사용 </li>
+        <li>이미지 원본<img src="image/w.png" alt="날씨이미지"></li>
+        <li>IS기법 적용<br>
+			오늘의 날씨 <span id="weather">흐림</span> <span>비</span>
+        </li>
+    </ul>
+    
+    <hr>
+    
+    <h1>IR(Image Replacement, 이미지 대처기법)</h1>
+    
+    <ul>
+    	<li>주로 웹표준 코딩에서는 구조와 디자인 서로 다른경우에 사용</li>
+        <li>마크업에서의 텍스트를 CSS에서 이미지로 바꿔 사용하는 기법</li>
+        <li>예)네이버에서 h1에 '네이버' 라고 되어 있지만 실제론 naver로고 이미지가 적용 </li>
+    </ul>
+</body>
+</html>

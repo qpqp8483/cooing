@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>가상클래스의 활용</title>
+<style>
+	li { color:gray; }   /* 태그 선택자 */
+	li:nth-child(even) { color:red; } /* 짝수번쨰 요소(태그)를 선택 */
+	li:nth-child(odd) { color:blue; } /* 홀수번쨰 요소(태그)를 선택 */
+	li:nth-child(3n) { text-decoration:underline; } /* 지정된 숫자의 배수만 요소(태그)를 선택 */
+	li:nth-child(3n+1) { font-weight:bold; } /* 3의 배수+1 만큼 요소(태그)를 선택 */
+	li:not(.bold) { background-color:green; } /* ~을 제외한 요소(태그)를 선택 */
+	li::first-letter { font-size:30px; } /* 첫번째 글자에만 적용시키고 싶은 옵션이 있을때 */
+	li::first-line { font-style:italic; } /* 첫줄만 선택하고자 할때 */
+	li:only-child { border:3px dashed red; } /* 형제가 없는 요소만 선택 */
+	input { border:1px solid gray; }
+	input:focus { border: 1px solid red; outline:none; } /* 포커스를 얻었을때(클릭했을때 ) */
+	input[type=checkbox]:checked { width:20px; height:20px; } /* [속성값]을 가지고 체크된 input요소(태그)만 선택할때 */
+</style>
+</head>
+
+<body>
+    <H1>가상클래스의 활용</H1>
+    <ul>
+        <li>저는 첫번째 li 내용입니다.<br>
+			띄어쓰기한다고 첫번째로 적용 안됩니다.</li>
+        <li class="bold">저는 두번째 li 내용입니다.</li>
+        <li>저는 세번째 li 내용입니다.</li>
+        <li>저는 네번째 li 내용입니다.</li>
+        <li>저는 다섯번째 li 내용입니다.</li>
+        <li>저는 여섯번째 li 내용입니다.</li>
+        <li>저는 일곱번째 li 내용입니다.</li>
+        <li>저는 여덟번째 li 내용입니다.</li>
+        <li>저는 아홉번째 li 내용입니다.</li>
+        <li>저는 열번째 li 내용입니다.</li>
+    </ul>
+    <ul>
+    	<li>저는 솔로입니다.</li>
+    </ul>
+    <fieldset>
+    	<legend>회원정보</legend>
+        <form action="#" method="post">
+        	<p>
+        	<label>id <input type="text" name="id"></label> <label>password <input type="password" name="pw"></label>
+            </p>
+            
+            <p>
+            <label> <input type="radio" name="gender" value="1">남자</label><label><input type="radio" name="gender" value="2">여자</label>
+            </p>
+            
+            <p>
+            <label> <input type="checkbox" name="habby" value="1">독서</label> <label><input type="checkbox"name="habby" value="2">영화감상 </label><label><input type="checkbox"name="habby" value="3">게임</label> <label> <input type="checkbox"name="habby" value="4">음악</label><label><input type="checkbox"name="habby" value="5">코딩</label>
+            </p>
+        </form>
+        
+    </fieldset>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+	* { margin:0; padding:0; list-style:none; }
+	header, footer {border:1px solid red;}
+	#wrap { width:1000px;
+			margin:auto; 
+			border:none;
+			padding:20px;}
+	
+	#header { }
+	#wrap #gnb ul { overflow:hidden; padding:20px;}/* float(li)의 마짐겹침 현상을 방지 */
+	#wrap #gnb li { /* 메인메뉴 */
+		float:left;
+		border: 1px solid red;
+		padding:20px;
+		margin-right:20px;
+		font-weight:bold;
+		background-color:red;
+		color:white;
+		border-radius:10px; }
+		
+	#container { overflow:hidden; }
+	#container aside { width:200px;
+					   border:1px solid blue;
+					   padding:20px;
+					   float:left;
+					   margin-top:20px;}
+	#container aside li { border-bottom:1px dashed #666;
+						  padding:10px 0;}				   
+	#container #contents { overflow:hidden;
+						   padding-bottom:20px;
+						   padding-left:50px;
+						   float:right;
+						   width:737px;
+						   box-sizing:border-box;
+						   background-color:#ccc;
+						   margin-top:20px;}
+	#container #contents p { background-color:#06c;
+							 width:200px;
+							 height:200px;
+							 margin:20px 20px 0 0;
+							 float:left;}
+	#container #banner { border: 1px dashed gray;
+						 position:absolute;
+						 top:145px; 
+						 left:50%;
+						 margin-left:520px;}
+	footer { text-align:center;
+			  padding:20px;}
+</style>
+</head>
+
+<body>
+<div id="wrap">
+	<header>
+    	<nav id="gnb">
+        	<ul>
+            	<li>회사소개</li>
+                <li>제품소개</li>
+                <li>커뮤니티</li>
+                <li>문의하기</li>
+            </ul>
+        </nav>
+    </header>
+    <div id="container">
+    	<aside>
+            <ul>
+                <li>맥북</li>
+                <li>아이패드</li>
+                <li>아이워치</li>
+                <li>아이폰</li>  
+            </ul>
+        </aside>
+        <div id="contents">
+        	<p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+        <div id="banner">나는 배너</div>
+    </div>
+    <footer>
+    	회사소개 | 찾아오시는길 | 문의전화
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,321 @@
+ @charset "utf-8";
+/* 초기화 */
+* { margin:0; padding:0; list-style:none; box-sizing:border-box; text-decoration:none;}
+
+html,body,#wrap { height:100%; }
+#wrap { min-width:1100px; }
+/* header시작 */
+header { width:100%; height:65px; border-bottom:1px solid #1e9c8f; background: linear-gradient(to bottom, #25b2a3 0%,#21a194 100%); }
+header>div { width:100%; height:100%; margin:auto; max-width:1700px; padding:0 100px 0 100px; min-width:900px; position:relative; }
+header h1 { width:93px; height:22px; padding-top:21px; display:inline-block; float:left; }
+header h1 a { width:93px; height:22px; background-image:url(../img/main.png); text-indent:-9999px; overflow:hidden; background-size:cover; display:block;}
+header nav { width:452px; height:100%; margin:auto; }
+header nav ul li { float:left; position:relative; height:22px; border-right:1px solid rgba(255,255,255,.2); margin-top:22px; } 
+header nav ul li:last-child { border:none; }
+header nav ul li a span:nth-child(2) { 
+						   display:block; 
+						   border-top:none;
+						   border-left:9px solid transparent;
+						   border-right:9px solid transparent;
+						   border-bottom:10px solid #23ccc5;		
+						   position:absolute;
+						   top:45px;
+						   left:50%;
+						   z-index:2;
+						   opacity:1;
+						   transform:translateX(-50%);	
+						   transition:all .2s ease;	 }
+
+header nav ul li a span:nth-child(3) {
+						   display:block; 
+						   border-top:none;
+						   border-left:10px solid transparent;
+						   border-right:10px solid transparent;
+						   border-bottom:11px solid #1e9c8f;	
+						   position:absolute;
+						   top:45px;
+						   left:50%;
+						   z-index:1;
+						   opacity:0;
+						   transform:translateX(-50%);	
+						   transition:all .2s ease;	
+ }
+header nav ul li:hover>a { color:#23ccc5; text-shadow:1px 1px 1px #004941; }
+header nav ul li a:hover span:nth-child(2) { top:33px; opacity:1; }
+header nav ul li a:hover span:nth-child(3) { top:31px; opacity:1; }
+header nav ul li a { font-family: 'Anton', sans-serif; font-size:25px; display:block; line-height:22px;padding:22px 16px 0; color:#fff; letter-spacing:1px; height:66px; margin-top:-22px; }
+header nav ul li:first-child a { color:#23ccc5; text-shadow:1px 1px 1px #004941; }
+header nav ul li:first-child a span { top:33px; }
+header p { float:right; margin-top:-44px; }
+header p a { font-size:12px; color:#fff;}
+header p a:hover { color:#0e4a44; } 
+header p a:first-child { border-right:1px solid rgba(255,255,255,.2); padding-right:16px; margin-right:12px; }
+header p .a_click { border-right:1px solid rgba(255,255,255,.2); padding-right:16px; margin-right:12px; }
+header p a i { font-size:13px; margin-right:5px; }
+#a_click i { font-size:13px; margin-right:5px; }
+header #h_menu { display:none; }
+
+/* header 끝 */
+
+/* container시작 */
+#container { width:100%; height:calc(100% - 130px); min-height:600px; background-color:#23ccc5; overflow:hidden; position:relative; }
+#container section { width:900px; height:598px; position:absolute; top:50%; left: 50%; transform:translate(-50%,-50%);}
+#container section h2 { display:none; }
+#container div:nth-child(2) { width:510px; height:478px; position:relative; float:left; margin-top:50px;}
+#container div:nth-child(2) div { width:534px; height:502px; position:absolute; z-index:100; text-indent:-9999px; background-image:url(../img/cameleon_top.png); background-repeat:no-repeat; top:-10px; left:-10px; }
+#container div:nth-child(2) div {
+	-webkit-animation: color-change-4x 6s linear infinite alternate both;
+	        animation: color-change-4x 6s linear infinite alternate both;
+}
+@-webkit-keyframes color-change-4x {
+  0% {
+    background-color: #19dcea;
+  }
+  33.3333% {
+    background-color: #b22cff;
+  }
+  66.666% {
+    background-color: #ea2222;
+  }
+  100% {
+    background-color: #f5be10;
+  }
+}
+@keyframes color-change-4x {
+  0% {
+    background-color: #19dcea;
+  }
+  33.3333% {
+    background-color: #b22cff;
+  }
+  66.666% {
+    background-color: #ea2222;
+  }
+  100% {
+    background-color: #f5be10;
+  }
+}
+
+
+/*#container div:nth-child(2) ul { width:524px; height:492px; position:absolute; overflow:hidden; }
+#container div:nth-child(2) li { width:700px; height:658px; text-indent:-9999px; overflow:hidden; position:absolute; top:-150px; left:-150px; animation:move_top 5s linear 0s infinite normal; }
+@keyframes move_top {
+	0% { top:-150px; left:-150px; }
+	25% { top:-150px; left:0px; }
+	50% { top:0px; left:0px; }
+	75% { top:0px; left:-150px; }
+	100%{ top:-150px; left:-150px; }
+}
+.active { z-index:1; }
+#container div:nth-child(2) li:first-child { background-image:url(../img/cameleon_1.png); }
+#container div:nth-child(2) li:nth-child(2) { background-image:url(../img/cameleon_2.png) }
+#container div:nth-child(2) li:nth-child(3) { background-image:url(../img/cameleon_3.png) }
+#container div:nth-child(2) li:last-child { background-image:url(../img/cameleon_4.png) } 
+*/
+#container div:nth-child(3) { float:left; margin:50px 0 0 37px; position:relative; height:330px; width:353px; }
+#container div:nth-child(3)>p:first-child { width:351px; height:142px; background-image:url(../img/text1.png); text-indent:-9999px; }
+#container div:nth-child(3)>ul:nth-child(2) { width:204px; height:69px; position:absolute; top:75px;}
+#container div:nth-child(3)>ul:nth-child(2) li { width:204px; height:69px; position:absolute; text-indent:-9999px; }
+#container div:nth-child(3)>ul:nth-child(2) li:nth-child(1) { background-image:url(../img/text2.png) }
+#container div:nth-child(3)>ul:nth-child(2) li:nth-child(2) { background-image:url(../img/text3.png) }
+#container div:nth-child(3)>ul:nth-child(2) li:nth-child(3) { background-image:url(../img/text4.png) }
+#container div:nth-child(3)>ul:nth-child(2) li:nth-child(4) { background-image:url(../img/text5.png) }
+#container div:nth-child(3)>p:nth-child(3) { background-image:url(../img/text6.png); width:351px; height:34px; margin-top:40px; text-indent:-9999px;}
+/* 3D룰렛-1 */
+#container div:nth-child(3)>#screen_hidden { display:block; width:100%; height:80px; position:absolute; bottom:0px; background-color:#23ccc5; display:none; }
+#container div:nth-child(3)>ul:nth-child(4) { width:70px; height:70px; transform-style:preserve-3d; transform:rotateX(0deg) ; transition:all .4s ease; margin-top:40px; float:left; position:absolute; bottom:0; }
+#container div:nth-child(3)>ul:nth-child(4) li { width:70px; height:70px; border-radius:5px; background-repeat:no-repeat; text-indent:-9999px; position:absolute; background-color:#91e6e2; }
+#container div:nth-child(3)>ul:nth-child(4) li:first-child { background-image:url(../img/head.png); background-position:14px 12px; transform:translate3d(0,0,35px); } 
+#container div:nth-child(3)>ul:nth-child(4) li:nth-child(2) { background-image:url(../img/body.png); background-position:7px 19px;transform:translate3d(0,35px,0px) rotateX(-90deg);} 
+#container div:nth-child(3)>ul:nth-child(4) li:nth-child(3) { background-image:url(../img/foot.png); background-position:6px 20px;transform:translate3d(0,0,-35px) rotateX(-180deg); } 
+#container div:nth-child(3)>ul:nth-child(4) li:last-child { background-image:url(../img/tail.png); background-position:11px 21px; transform:translate3d(0,-35px,0) rotateX(-270deg); } 
+/* 3D룰렛-2 */
+#container div:nth-child(3)>ul:nth-child(5) { width:268px; height:70px; transform-style:preserve-3d; transform:rotateX(0deg); float:right; margin:40px 0 0 0; transition:all .4s ease; position:absolute; right:0; bottom:0; }
+#container div:nth-child(3)>ul:nth-child(5) li { width:268px; height:70px; border-radius:5px;position:absolute; background-color:#91e6e2; font-family: 'Nanum Gothic', sans-serif; font-weight:bold; color:#515151; font-size:18px; text-align:center; line-height:68px; }
+#container div:nth-child(3)>ul:nth-child(5) li span { font-size:14px; color:#7d7d7d; }
+#container div:nth-child(3)>ul:nth-child(5) li:first-child { transform:translate3d(0,0,35px); } 
+#container div:nth-child(3)>ul:nth-child(5) li:nth-child(2) { transform:translate3d(0,35px,0px) rotateX(-90deg); }  
+#container div:nth-child(3)>ul:nth-child(5) li:nth-child(3) { transform:translate3d(0,0,-35px) rotateX(-180deg); } 
+#container div:nth-child(3)>ul:nth-child(5) li:last-child { transform:translate3d(0,-35px,0) rotateX(-270deg); } 
+/* 버튼 */
+#container div:nth-child(4) { width:234px; height:12px; margin:auto; }
+#container div:nth-child(4) p { width:13px; height:13px; text-indent:-9999px; border-radius:100%;  }
+#container div:nth-child(4) label { float:left; margin-right:60px; margin-top:50px; }
+#container div:nth-child(4) label:nth-child(4) { margin-right:0; }
+#container div:nth-child(4) label input { display:none; }
+#container div:nth-child(4) label p:hover { cursor:pointer; }
+#container div:nth-child(4) label input:checked+p { border:2px solid #fff; transform:scale(1.4); }
+#container div:nth-child(4) label:nth-child(1) p { background-color:#df294b; }
+#container div:nth-child(4) label:nth-child(2) p { background-color:#681c91; }
+#container div:nth-child(4) label:nth-child(3) p { background-color:#373fde; }
+#container div:nth-child(4) label:nth-child(4) p { background-color:#dd54e6; }
+#container section>span { display:block; text-indent:-9999px; position:absolute; background-repeat:no-repeat; transform:scale(1.2);  width:130px; height:60px; background-size:cover; }
+/* 도형들 */
+#container section>span { z-index:100; }
+#container section>span:nth-child(5) { background-image:url(../img/shape1.png); top:-20px; left:-100px; animation:move_1 1s linear 0s infinite alternate; }
+@keyframes move_1 {
+    from {top:-20px;}
+    to {top:-10px;}
+}
+#container section>span:nth-child(6) { background-image:url(../img/shape2.png);  top:200px; left:-250px; animation:move_2 1s linear 0s infinite alternate; }
+@keyframes move_2 {
+    from {top:200px;}
+    to {top:190px;}
+}
+#container section>span:nth-child(7) { background-image:url(../img/shape3.png); top:-40px; left:350px; animation:move_3 1s linear 0s infinite alternate; }
+@keyframes move_3 {
+    from {top:-40px;}
+    to {top:-50px;}
+}
+#container section>span:nth-child(8) { background-image:url(../img/shape4.png); top:-100px; left:800px; animation:move_4 1s linear 0s infinite alternate; width:90px; height:80px; }
+@keyframes move_4 {
+    from {top:-100px;}
+    to {top:-90px;}
+}
+#container section>span:nth-child(9) { background-image:url(../img/shape5.png); top:40px; left:1050px; animation:move_5 1s linear 0s infinite alternate; }
+@keyframes move_5 {
+    from {top:40px;}
+    to {top:30px;}
+}
+#container section>span:nth-child(10) { background-image:url(../img/shape6.png); top:500px; left:-20px; animation:move_6 1s linear 0s infinite alternate; }
+@keyframes move_6 {
+    from {top:500px;}
+    to {top:510px;}
+}
+#container section>span:nth-child(11) { background-image:url(../img/shape7.png); top:460px; left:700px; animation:move_7 1s linear 0s infinite alternate; width:100px; height:80px;  }
+@keyframes move_7 {
+    from {top:460px;}
+    to {top:450px;}
+}
+#container section>span:nth-child(12) { background-image:url(../img/shape8.png); top:400px; left:1000px; animation:move_8 1s linear 0s infinite alternate; }
+@keyframes move_8 {
+    from {top:400px;}
+    to {top:410px;}
+}
+/* container끝 */
+footer { height:65px; background-color:#f9f0c5; }
+footer>div { height:100%; margin:auto; max-width:1700px; padding:0 100px 0 100px; position:relative; }
+footer>div h2 { width:93px; height:22px; padding-top:21px; display:inline-block; float:left; }
+footer>div h2 a { width:93px; height:22px; background-image:url(../img/tact.png); text-indent:-9999px; overflow:hidden; background-size:cover; display:block; opacity:.4; }
+footer>div div { position:absolute; top:17px; float:left; text-align:center; left:50%; transform:translateX(-50%); }
+footer>div p { font-family:돋움,dotum; font-size:13px; color:#908b71; }
+footer>div ul { float:right; margin-top:17px; }
+footer>div ul li { float:left; text-indent:-9999px; margin-right:13px;}
+footer>div ul li a { text-indent:-9999px;}
+footer>div ul li:first-child a { width:22px; height:23px; display:block; background-image:url(../img/int.jpg); background-repeat:no-repeat; background-position:0 2px; }
+footer>div ul li:nth-child(2) a { width:26px; height:23px; display:block; background-image:url(../img/twt.jpg); }
+footer>div ul li:last-child { margin:0; }
+footer>div ul li:last-child a { width:12px; height:23px; display:block; background-image:url(../img/facebook.jpg); }
+
+/* 인트로 */
+#intro { width:100%; height:100%; position:absolute; top:0; background-color:#23ccc5; z-index:200; }
+#intro div { width:250px; height:70px; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); }
+#intro div p { width:0px; height:54px; background-color:#fff; position:absolute; top:8px; right:8px; transition:.3s all ease; }
+#intro div img { display:block; margin:14px 0 0 30px; display:none;}
+#intro div span { position:absolute; background-color:#fff; display:block; transition:all .7s cubic-bezier(.3,.3,1,.8); }
+#intro div span:nth-child(3) { width:0; height:8px; top:0; left:0; }
+#intro div span:nth-child(5) { width:0; height:8px; bottom:0; right:0px; }
+#intro div span:nth-child(4) { width:8px; height:0; top:0; right:0; }
+#intro div span:nth-child(6) { width:8px; height:0; bottom:0; left:0;  }
+
+@media (max-width:1024px){
+	#wrap { min-width:0px; }
+	header>div { min-width:0px;  padding:0 20px 0; }
+	header p { position:absolute; right:0; z-index:200; }
+	header p a { display:block; }
+	header p .a_click { border-right:none; }
+	header nav ul li a span:nth-child(2),header nav ul li a span:nth-child(3) { display:none; }
+	header>div #h_menu { display:block; text-indent:-9999px; width:25px; height:22px; background-image:url(../img/h_menu.png); cursor:pointer; position:absolute; top:22px; right:20px; z-index:100; }
+	header nav { position:fixed; width:100%; height:100%; margin:auto; top:0; left:0; z-index:200; background-color:rgba(255,255,255,.8); display:none; }
+	header nav ul { height:460px; width:250px; margin-top:-230px; position:absolute; top:50%; left:50%; margin-left:-125px; }
+	header nav ul li { position:relative; height:115px; border-right:none; margin-top:0px; float:none; border-bottom:2px solid #999;text-align:center;  }
+	header nav ul li:first-child { margin-top:0px; }
+	header nav ul li:first-child a { color:#555; text-shadow:none; }
+	header nav ul li:first-child:hover a { color:#23ccc5; text-shadow:1px 1px 1px #004941; }
+	header nav ul li a { font-size:35px; display:block; line-height:114px;padding:0 16px 0; color:#555; letter-spacing:1px; margin-top:0; height:100%; }
+	header p { float:none; margin-top:0px; margin:auto; position:absolute; top:100px; left:0; display:block; width:130px; display:none; position:fixed;}
+	header p a { font-size:20px; color:#555; font-family: 'Anton', sans-serif; font-weight:200; float:left; }
+	header p a:hover { color:#23aaa0; } 
+	header p a:first-child { border-right:1px solid rgba(255,255,255,.2); padding-right:16px; margin-right:12px; }
+	header p .a_click { border-right:1px solid rgba(255,255,255,.2); padding-right:16px; margin-right:12px; }
+	header p a i { font-size:0px; margin-right:5px; }
+	#a_click i { font-size:13px; margin-right:5px; }
+	/* container */
+	#container { overflow:hidden;height:800px; }
+	#container section { width:550px; height:1000px; position:absolute; top:50%; left: 50%; transform:translate(-50%,-50%);}
+	#container section h2 { display:none; }
+	#container div:nth-child(2) { width:510px; height:478px; position:relative; float:none; margin-top:50px; margin:300px auto 0;}
+	#container div:nth-child(2) div { width:300px; height:282px; position:absolute; z-index:100; text-indent:-9999px; background-image:url(../img/cameleon_top_m.png); background-repeat:no-repeat; top:-10px; left:-10px; background-position:center center; margin-left:115px; border:1px solid #23ccc5; }
+    #container div:nth-child(3) { float:none; margin:0px auto 0px; position:relative; height:160px; width:353px; border:1px solid transparent; }
+	#container div:nth-child(3)>p:first-child { width:300px; height:121px; background-image:url(../img/text1.png); text-indent:-9999px; margin:-650px auto 0; background-size:cover; }
+	#container div:nth-child(3)>ul:nth-child(2) { width:175px; height:58px; position:absolute; top:-585px;margin-left:25px; }
+	#container div:nth-child(3)>ul:nth-child(2) li {
+		width: 175px;
+		height: 58px;
+		position: absolute;
+		text-indent: -9999px;
+		background-size:cover;
+	}
+	#container div:nth-child(3)>p:nth-child(3) {  
+		background-size: cover;
+		width: 300px;
+		height: 29px;
+		margin: 385px auto 0; 
+	}
+	#container div:nth-child(3)>ul:nth-child(4) { width:70px; height:70px; transform-style:preserve-3d; transform:rotateX(0deg) ; transition:all .4s ease; float:left; position:absolute; top:-120px; display:none; }
+	#container div:nth-child(3)>ul:nth-child(5) { width:300px; height:70px; transform-style:preserve-3d; transform:rotateX(0deg); float:right; margin:-200px 0 0 0; transition:all .4s ease; position:absolute; right:25px; bottom:0; top:120px; }
+	#container div:nth-child(3)>ul:nth-child(5) li { width:300px; }
+	#container div:nth-child(4) { margin:-160px auto 0px; }
+	#container section>span:nth-child(5) { top:50px; left:-100px; }
+	@keyframes move_1 {
+    from {top:50px;}
+    to {top:40px;}
+	}
+	#container section>span:nth-child(6) { top:400px; left:-120px; }
+	@keyframes move_2 {
+    from {top:400px;}
+    to {top:390px;}
+	}
+	#container section>span:nth-child(7) { top:90px; left:490px; }
+	@keyframes move_3 {
+    from {top:90px;}
+    to {top:80px;}
+	}
+	#container section>span:nth-child(8) { top:350px; left:580px; }
+	@keyframes move_4 {
+    from {top:350px;}
+    to {top:340px;}
+	}
+	#container section>span:nth-child(9) { top:650px; left:500px; }
+	@keyframes move_5 {
+    from {top:650px;}
+    to {top:640px;}
+	}
+	#container section>span:nth-child(10) { top:600px; left:-20px; }
+	@keyframes move_6 {
+    from {top:600px;}
+    to {top:590px;}
+	}
+	#container section>span:nth-child(11) { top:800px; left:550px; }
+	@keyframes move_7 {
+    from {top:800px;}
+    to {top:790px;}
+	}
+	#container section>span:nth-child(12) { top:820px; left:-50px; }
+	@keyframes move_8 {
+    from {top:820px;}
+    to {top:810px;}
+	}
+	/* 풋터 */
+	footer>div>h2,footer>div>ul { display:none; }
+	footer>div>div>p:first-child { display:none; }
+	footer>div>div>p:last-child { margin-top:10px;}
+	#intro { height:100%;}
+}
+@media (max-width:573px){
+	footer>div>div>p:last-child { margin-top:0px;}
+	header p { top:20px; }
+}
+@media (min-width:1024px){
+	header>div>nav{ display:block; }	
+}

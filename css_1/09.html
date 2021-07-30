@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>2단 레이아웃</title>
+<style>
+	* { margin:10px; padding:0; list-style:none; } /* 리셋 */
+	div { border:2px solid black; }/* 대표속성 */
+	h1 {text-align:center; }
+	/* 리셋 */
+	
+	#wrap { width:1000px;
+			border-color:red; /* 단일속성 */
+			margin:auto; }
+	#ex, #ex2, #ex3 { /* 화면 가운데 정렬 */
+		  width:150px;
+		  height:100px;
+		  position:absolute;
+		  left:50%;
+		  top:50%; 
+		  margin-left:-75px;
+		  margin-top:-50px; 
+		  box-sizing:border-box; /* 콘텐츠의 크기기준점 설정 */
+		  }
+	#ex2 { /* 가운데에서 특정 거리에 위치하게 (배너자리) */
+		  border:1px dashed blue;
+		  margin-left:85px;
+		  }	
+	#ex3 { width:50px;
+		   height:50px; 
+		   margin:0;
+		   padding:0;
+		   left:100px;
+		   top:0;
+		   position:relative; /* left,top(절대좌표)의 기준점이 되는 속성 */}
+	
+	#ex2>div {position:absolute; width:50px; height:30px; border-radius:10px; }
+	#ex2>div:nth-child(1) {left:5px;}
+	#ex2>div:nth-child(2) {right:5px; top:0}
+	#ex2>div:nth-child(3) {left:5px; top:45px;}
+	#ex2>div:nth-child(4) {right:5px; top:45px;}
+	
+	
+
+</style>
+</head>
+
+<body>
+<h1>2단 레이아웃</h1>
+<div id="wrap">
+</div>
+<div id="ex">
+</div>
+<div id="ex2">
+    <div>
+    </div>
+    <div>
+    </div>
+    <div>
+    </div>
+    <div>
+    </div>
+</div>
+</div>
+</body>
+</html>

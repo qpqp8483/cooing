@@ -1,0 +1,24 @@
+﻿<html>
+<head><title>배경(background)</title>
+<style>
+	div {border:1px dashed gray; height:100px; width:150px; margin:10px;
+	background-image:url("ryan.gif"); text-align:center; line-height:100px;}
+</style>
+</head>
+<body>
+<h1>background 관련속성</h1>
+<h2>background-size</h2>
+<div style="background-size:cover">size:cover</div>
+<div style="background-size:contain"></div>
+<div style="background-size:100%"></div>
+<div style="background-size:100% 100%"></div>
+<div style="background-size:50px 50px"></div>
+<h2>background-repeat</h2>
+<div style="background-size:50px 50px">기본(반복)</div>
+<div style="background-size:50px 50px;background-repeat:no-repeat">반복안함(no-repeat)</div>
+<div style="background-size:50px 50px;background-repeat:repeat-x">가로반복(no-repeat)</div>
+<div style="background-size:50px 50px;background-repeat:repeat-y">세로반복(no-repeat)</div>
+<div style="background-size:50px 50px;background-position:center center;background-repeat:no-repeat;">가운데(no-repeat)</div>
+<div style="background-size:50px 50px;background-position:right bottom;background-repeat:no-repeat;">가운데(no-repeat)</div>
+</body>
+</html>

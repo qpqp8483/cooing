@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>gradient(그라데이션)</title>
+<style>
+	div { border:3px solid gray; 
+		  width:300px;
+		  height:200px;
+		  margin:20px;}
+		  
+	#line { background:linear-gradient(180deg, red 33%, yellow 66% ) ; /* deg는 각도(시계방향으로 돌아감)
+																		각도 , 색/위치 , 색/위치
+																		색은 여러개 지정 가능*/}
+																		
+	#radial { /*background: radial-gradient(red, yellow); /* 기본형 */
+			  background: radial-gradient(circle closest-side at 20% 20%, red, orange, yellow, green, blue, navy, purple); /* ellipse:타원
+			 circle:정원 
+			 cilsest-corner : 가장 가까운 모서리에서 그라데이션 표현
+			 farthest-corner : 가장 먼 모서리에서 그라데이션 표현
+			 cilsest-side : 가장 가까운 변에서 그라데이션 표현
+			 farthest-side : 가장 먼 변에서 그라데이션 표현
+				  */}
+				  
+	#custom { background: -webkit-linear-gradient(top, rgba(206,219,233,1) 0%,rgba(170,197,222,1) 13%,rgba(97,153,199,1) 26%,rgba(58,132,195,1) 40%,rgba(65,154,214,1) 57%,rgba(75,184,240,1) 71%,rgba(58,139,194,1) 88%,rgba(38,85,139,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(206,219,233,1) 0%,rgba(170,197,222,1) 13%,rgba(97,153,199,1) 26%,rgba(58,132,195,1) 40%,rgba(65,154,214,1) 57%,rgba(75,184,240,1) 71%,rgba(58,139,194,1) 88%,rgba(38,85,139,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
+</style>
+</head>
+
+<body>
+<h1>그라데이션 사용하기</h1>
+<div id="line">선형 그라데이션</div>
+<div id="radial">원형 그라데이션</div>
+<div id="custom">이쁜 그라데이션</div>
+</body>
+</html>

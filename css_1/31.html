@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Frame / iFrame</title>
+</head>
+
+<body>
+<h1>프레임셋(frameset)사용하기</h1><!---->
+<h2>사용법</h2>
+<pre><!--키보드 값(스페이스, 엔터, 탭...) 그대로 해석-->
+	안녕하세요.&lt;br&gt;&lt;br&gt;<br><!--html에 해석되게말고 뾰족이괄호나 등등등을 안먹게하고싶을때 위에 Split 들어가서 오른쪽 미리보기같은곳에 써넣어주면 위에&lt; 저걸로 나온대. 특수기호 뾰족이 괄호를 쓰는거랭-->
+	반갑습니다.
+</pre>
+
+<xmp>
+	안녕하세요.<br>
+    반갑습니다.
+    <frameset colos="25%",*>
+    <frame src="55,html">
+    <frame src="http://naver.com">
+</xmp>
+<!--태그를 해석하지 않고 문자로 인식(지금 이주석도 xmp에 넣으면 주석으로 인식안하고 바로 출력돼서 여기다 썼슈-->
+</body>
+</html>
